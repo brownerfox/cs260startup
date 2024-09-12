@@ -1,0 +1,3 @@
+9/11/24: There was a lot of little things that I felt like I learned from the github assignment. I appreciated learning more about git and console commands which I have personally felt to be one of my biggest weaknesses when it comes to CS. I figure with more practice and time I will come to appreciate these programs quite a bit more.
+
+9/11/24: Today I set up my website and updated all of the settings according to the classes specifications. I set up this elastic IP:3.214.76.211 and a keypair to access the website. Still don't know a lot about web design but we'll get there :D
