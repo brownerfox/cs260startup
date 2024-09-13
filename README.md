@@ -31,4 +31,4 @@ WebSocket data: This will be neccesary for a chat between users and updating use
 
 Sketches
 
-![This is an image of the website sketch that I made]("C:\Users\taftj\OneDrive\Desktop\cs260\cs260startup\fishwebsite(1).png")
+![This is an image of the website sketch that I made](fishwebsite(1).png)
