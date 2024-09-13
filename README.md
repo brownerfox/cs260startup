@@ -21,7 +21,10 @@ JavaScript - Allows for interaction in the website. Logging in
 
 React - React will be used to develop an interactive user interface for the website. This will help create a dynamic and responsive experience.
 
-Web service - This will provide the functions required to handle our fetch functions and provide endpoints. It can be used on the social side of our website to help users communicate. This will also be crucial for updating our map for fishing
+Web service - Service endpoints for:
+    - retrieving photos and information about fish/fishing gear
+    - retrieving comments
+    - https://developer.mozilla.org/en-US/docs/Web/API/Geolocation
 
 Authentication: The authentication will be used to store information for our website's users. This will be neccesary to log into the website and communicate with other users. We will use an authentication service.
 
