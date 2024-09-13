@@ -1,17 +1,17 @@
 # cs260startup
 
-##Elevator Pitch
+## Elevator Pitch
 
 Hi, my name is Taft Lakey and today I'm going to introduce you to my start up, FishPics. This is a new state of the art website where you and your friends can upload the fish you catch as well as find new fishing holes with tips to catch fish there from other fishers! This will be a website for fishers maintained by other fishers who just happen to love web development. You won't have to worry about an outdated web app because this is our passion project!
 
-##Key Features
+## Key Features
 
 - Upload your fishing photos
 - Geo tracking which will update information about waters
 - Option to show your gear used, which can inform other fishers about what you used
 - Social media aspect which will involve sharing your fish with friends
 
-##Technology
+## Technology
 
 HTML - Provide the basic structure for the web pages. Multiple HTML pages, one for each feature.
 
@@ -29,6 +29,6 @@ Database data: This will store our users data. This can be anything from the pos
 
 WebSocket data: This will be neccesary for a chat between users and updating users on new fish being caught in an area.
 
-##Sketches
+## Sketches
 
 ![This is an image of the website sketch that I made](fishwebsite(1).png)
