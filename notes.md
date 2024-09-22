@@ -1,3 +1,5 @@
 9/11/24: There was a lot of little things that I felt like I learned from the github assignment. I appreciated learning more about git and console commands which I have personally felt to be one of my biggest weaknesses when it comes to CS. I figure with more practice and time I will come to appreciate these programs quite a bit more.
 
 9/11/24: Today I set up my website and updated all of the settings according to the classes specifications. I set up this elastic IP:3.214.76.211 and a keypair to access the website. Still don't know a lot about web design but we'll get there :D
+
+9/21/24: There's gonna be a lot that I learned from this last week that I'm going to put in this entry right here. I learned about the structure of HTML. I had previously learned most of it but it was a good reminder. I also was reminded on how to implement certain tags and create elements. I need to use the image address and not just copy the links of the images. I also learned about svg and canvas elements in HTML. I learned that the <video> tag uses mp4 files and that you need to use a special tag to use youtube videos.
