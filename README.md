@@ -35,3 +35,7 @@ WebSocket data: This will be neccesary for a chat between users and updating use
 ## Sketches
 
 ![This is an image of the website sketch that I made](fishwebsite(1).png)
+
+## HTML Startup
+
+For my HTML Startup deliverable I had to create pages specific for my website. As I was doing this I had to learn a lot more about the syntax of HTML and then plan out what tools and features I wanted to create. This led to me learning quite a bit about structure in HTML. I also used the deployFiles program to upload my html files to my website. I had to learn a lot about the caddy file because the syntax is very specific.
