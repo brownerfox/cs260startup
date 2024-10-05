@@ -38,4 +38,42 @@ WebSocket data: This will be neccesary for a chat between users and updating use
 
 ## HTML Startup
 
-For my HTML Startup deliverable I had to create pages specific for my website. As I was doing this I had to learn a lot more about the syntax of HTML and then plan out what tools and features I wanted to create. This led to me learning quite a bit about structure in HTML. I also used the deployFiles program to upload my html files to my website. I had to learn a lot about the caddy file because the syntax is very specific.
+### 1
+
+At first, I skipped deploying the Simon HTML, not intentionally but I did it eventually. I got help from a TA changing my caddy file because I had changed the syntax improperly on a previous assignment.
+
+I used the HTML example files to learn more of the syntax and structure of HTML. Then I would use VS codes dev tool to see how the HTML files would appear
+
+### 2
+
+For this step, I drew a lot of inspiration from the Simon HTML to add certain elements into my HTML files. Like I said previosuly I learned a good deal of the HTML structure from these files.
+
+### 3
+
+This step required me to think about the future things that I want my application to have. I had to go over some of my notes for what I had wanted the app to have and then think about how to implement them.
+
+I added in a spot to record the location of the pictures, which will be an API call.
+
+I have a log in page which will require a data base to function, as well as posts which are linked to an account will require a data base.
+
+In the feed section there will be comments and likes for the post which represent WebSocket data
+
+### 4
+
+At first, I didn't have great representation of my future technology but I revised my html files and changed the file to show where I was planning on drawing future technologies.
+
+### 5
+
+I just made sure to include an index.html file that would function as my log in page.
+
+### 6, 7 & 8
+
+I'm not very good at using GitHub consistently but I'm making it a goal to commit and push my code to GitHub as I finish mini projects.
+
+I also need to be better at changing my notes.md file.
+
+After I finished my project and made sure that it was well represented on my website, I pushed my final work to my GitHub.
+
+### 9 & 10
+
+At first I was struggling to deploy my HTML files to my server because of my caddy file. I called a TA and received help in fixing my error with my syntax. Then I was able to deploy my HTML files to my server. 
