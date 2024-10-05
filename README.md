@@ -48,19 +48,23 @@ I used the HTML example files to learn more of the syntax and structure of HTML.
 
 For this step, I drew a lot of inspiration from the Simon HTML to add certain elements into my HTML files. Like I said previosuly I learned a good deal of the HTML structure from these files.
 
+I created 5 html files that represent different sections of my website. These included links between eachother.
+
 ### 3
 
 This step required me to think about the future things that I want my application to have. I had to go over some of my notes for what I had wanted the app to have and then think about how to implement them.
+
+### 4
+
+At first, I didn't have great representation of my future technology but I revised my html files and changed the file to show where I was planning on drawing future technologies.
 
 I added in a spot to record the location of the pictures, which will be an API call.
 
 I have a log in page which will require a data base to function, as well as posts which are linked to an account will require a data base.
 
-In the feed section there will be comments and likes for the post which represent WebSocket data
+In the feed section there will be comments and likes for the post which represent WebSocket data.
 
-### 4
-
-At first, I didn't have great representation of my future technology but I revised my html files and changed the file to show where I was planning on drawing future technologies.
+The create post file will add the information given by the user and store it in the database to create and store a post.
 
 ### 5
 
