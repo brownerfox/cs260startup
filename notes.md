@@ -5,3 +5,5 @@
 9/21/24: There's gonna be a lot that I learned from this last week that I'm going to put in this entry right here. I learned about the structure of HTML. I had previously learned most of it but it was a good reminder. I also was reminded on how to implement certain tags and create elements. I need to use the image address and not just copy the links of the images. I also learned about svg and canvas elements in HTML. I learned that the <video> tag uses mp4 files and that you need to use a special tag to use youtube videos.
 
 9/28/24: Man did I learn a lot completing the html startup assignment. I learned a lot about html by actually putting it into practice. I learned that the caddy file syntax is very particular and that I changed the location of a brack which was preventing me from deploying my html files.
+
+10/12/24: I learned about the several method that lists have prebuilt into them in javascript. I used the every method to evaluate if every item in the list would meet a certain requirement. For every the syntax is, (the list).every(the condition that you set).
