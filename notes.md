@@ -7,3 +7,5 @@
 9/28/24: Man did I learn a lot completing the html startup assignment. I learned a lot about html by actually putting it into practice. I learned that the caddy file syntax is very particular and that I changed the location of a brack which was preventing me from deploying my html files.
 
 10/12/24: I learned about the several method that lists have prebuilt into them in javascript. I used the every method to evaluate if every item in the list would meet a certain requirement. For every the syntax is, (the list).every(the condition that you set).
+
+CSS Startup: I'm learning a lot of different settings in css and I learned about the hover tool for buttons to add interactiveness for my page
