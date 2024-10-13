@@ -41,7 +41,7 @@ header nav menu li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -51,7 +51,7 @@ main div {
 
 main input {
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     width: 80%;
     max-width: 400px;
     border: 1px solid #ccc;
