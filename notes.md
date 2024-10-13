@@ -8,4 +8,4 @@
 
 10/12/24: I learned about the several method that lists have prebuilt into them in javascript. I used the every method to evaluate if every item in the list would meet a certain requirement. For every the syntax is, (the list).every(the condition that you set).
 
-CSS Startup: I'm learning a lot of different settings in css and I learned about the hover tool for buttons to add interactiveness for my page. Really, once you code certain css things for your website, and if those parts don't change, then you can re-use that code and save a ton of time
+CSS Startup: I'm learning a lot of different settings in css and I learned about the hover tool for buttons to add interactiveness for my page. Really, once you code certain css things for your website, and if those parts don't change, then you can re-use that code and save a ton of time. I'm learning that having multiple divisions is actually key to create a function website. Otherwise the website doesn't know how to process multiple lines of <p> or thinks of this sort. Tricky thing is that you also need matching css attributes for your new divisions.
