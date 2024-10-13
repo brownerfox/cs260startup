@@ -40,6 +40,84 @@ header nav menu li a:hover {
     text-decoration: underline;
 }
 
+main {
+    text-align: center;
+}
+
+main h2 {
+    margin: 20px 0;
+}
+
+img.profile-image {
+    width: 60px; 
+    height: 60px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+img.post-image {
+    width: 400px;
+    height: 300px; 
+    object-fit: cover;
+}
+
+
+nav {
+    background-color: #00A86B;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav menu li {
+    margin: 0 15px;
+}
+
+nav menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav menu li a:hover {
+    text-decoration: underline;
+}
+
+
+.feed {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.feed .post {
+    margin-bottom: 20px;
+}
+
+.post-info {
+    margin-bottom: 10px;
+}
+
+.post-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
 footer {
     background: #00A86B;
     color: white;
