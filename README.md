@@ -81,3 +81,29 @@ After I finished my project and made sure that it was well represented on my web
 ### 9 & 10
 
 At first I was struggling to deploy my HTML files to my server because of my caddy file. I called a TA and received help in fixing my error with my syntax. Then I was able to deploy my HTML files to my server. 
+
+## CSS Startup
+
+### 1
+
+The first expectation of this assignment wasn't something that I could do. I'm going to give a better explanation of this when addressing parts 6, 7 & 8. For now, I will just say that I was unable to push the SimonCSS to my production environment due to several technical errors that I ahve been facing with EC2 and Route 53. However, I was able to draw a lot of inspiration from the SimonCSS files which helped me finish my assignment.
+
+### 2
+
+I designed the CSS for my startup application to ensure a visually appealing interface. I used a variety of new features that I learned. The main one being the hover attribute, which enables me to make an interactive environment for my user as they visit my website. I also got to learn how to better implement flex in CSS so that the users can experience a dynamic environment that will match up to their needs.
+
+### 3
+
+I tried to be better about making periodic commits as I was working through my project. If I'm being honest, this week has had me so swamped that I've struggled to work on my project throughout the week, unless it was one of the many futile attempts that I made in starting up my instance again with a connected domain. Because of this, all of my commits have been made in the last 3 hours as I've tried to cram this part of the project as fast as possible.
+
+### 4
+
+I updated my notes.md with all of the little information and tools that I've found.
+
+### 5
+
+I have git pushed my final CSS startup additions but I think that I'm going to go and take screenshots of all my html pages function on my live server version, hoping that it might appease you as you are grading my assignment.
+
+### 6, 7 & 8
+
+So here is the fun part of my last 2 weeks. I uploaded my html assignment. It went into the gradebook as a 0 which was quite alarming at first. I was pleased to see that it was because I had forgotten to update my README.md file, AKA, what I'm doing right now for my HTML Startup assignment. I then went to reupload my assignment and it was put in once again as a 0. This time the message was far less appealing. I was told that my website was no longer running. I went to check and it was true. I restarted my instance and reached out to a TA, all to no avail. My website had stopped funcitoning. I found that I had not yet verified my email so they shut down my down. I reverified my email and then recreated the instance inorder to get my production environment running. It still would not let me use my domain that had worked only a week before. I then bought a new domain, talked to another TA and was incapable of getting my production environment up and running again. I reached out to Professor Venture over email and discord with no response. So after all of this experience, I decided to do my CSS Startup regardless of my current incapabilities of successfully running my production environment. Thanks for listening to my TEDtalk.
