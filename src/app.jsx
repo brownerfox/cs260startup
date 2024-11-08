@@ -56,7 +56,7 @@ function App() {
                     path='/'
                     element = {
                         <Login 
-                        userName={username}
+                        userName={userName}
                         authState={authState}
                         onAuthChange={(userName, authState) => {
                             setAuthState(authState);
@@ -83,3 +83,9 @@ function App() {
         </BrowserRouter>
     );   
 }
+
+function NotFound() {
+    return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
+  }
+  
+  export default App;
