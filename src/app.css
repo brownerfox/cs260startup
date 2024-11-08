@@ -1,0 +1,21 @@
+.navbar-brand {
+    padding-left: 0.3em;
+    border-bottom: solid #00A86B thin;
+  }
+  
+  menu .nav-item {
+    padding: 0 0.3em;
+  }
+  
+  footer a {
+    float: right;
+  }
+  
+  @media (max-height: 600px) {
+    header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+  }
