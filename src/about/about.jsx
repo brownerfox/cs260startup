@@ -1,23 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './about.css';
 
 export function About() {
   return (
     <div>
-      <header>
-        <h1>FishPics</h1>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/feed">Feed</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-        </nav>
-        <hr />
-      </header>
-      
       <main>
         <h2>About</h2>
         <hr />
@@ -28,13 +14,6 @@ export function About() {
           and baits used to the location the fish was caught.
         </p>
       </main>
-      
-      <footer>
-        <hr />
-        <span className="text-reset">Taft Lakey</span>
-        <br />
-        <a href="https://github.com/brownerfox/cs260startup">GitHub</a>
-      </footer>
     </div>
   );
 }

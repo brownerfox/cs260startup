@@ -1,11 +1,10 @@
-// Profile.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Feed from './Feed';
 import './profile.css';
 
 export function Profile() {
-  // Sample data; this could come from props or API calls in a real app
+  // Sample data; in a real app, this could come from props or API calls
   const posts = [
     {
       location: "Creek Reservoir",
@@ -20,19 +19,6 @@ export function Profile() {
 
   return (
     <div>
-      <header>
-        <h1>FishPics</h1>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/feed">Feed</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-        </nav>
-        <hr />
-      </header>
-
       <main>
         <div className="profile">
           <h2>BrownFox</h2>
@@ -47,15 +33,9 @@ export function Profile() {
           </ul>
         </nav>
 
+        {/* Display user posts in the Feed component */}
         <Feed posts={posts} />
       </main>
-
-      <footer>
-        <hr />
-        <span className="text-reset">Taft Lakey</span>
-        <br />
-        <a href="https://github.com/brownerfox/cs260startup">GitHub</a>
-      </footer>
     </div>
   );
 }
