@@ -1,0 +1,53 @@
+{
+  "name": "cs260startup",
+  "version": "1.0.0",
+  "description": "Hi, my name is Taft Lakey and today I'm going to introduce you to my start up, FishPics. This is a new state of the art website where you and your friends can upload the fish you catch as well as find new fishing holes with tips to catch fish there from other fishers! This will be a website for fishers maintained by other fishers who just happen to love web development. You won't have to worry about an outdated web app because this is our passion project!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "classnames": "^2.3.2",
+    "csstype": "^3.1.2",
+    "dequal": "^2.0.3",
+    "dom-helpers": "^5.2.1",
+    "esbuild": "^0.17.18",
+    "invariant": "^2.2.4",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "nanoid": "^3.3.6",
+    "object-assign": "^4.1.1",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.23",
+    "prop-types": "^15.8.1",
+    "prop-types-extra": "^1.1.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-is": "^16.13.1",
+    "react-lifecycles-compat": "^3.0.4",
+    "react-router": "^6.11.1",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "^5.0.1",
+    "react-transition-group": "^4.4.5",
+    "regenerator-runtime": "^0.13.11",
+    "rollup": "^3.21.6",
+    "scheduler": "^0.23.0",
+    "source-map-js": "^1.0.2",
+    "tslib": "^2.5.0",
+    "uncontrollable": "^7.2.1",
+    "vite": "^4.3.5",
+    "warning": "^4.0.3"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
