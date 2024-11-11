@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export function ImageUpload() {
-    const [image, setImage] = useState(null);
-
+function ImageUpload({ onImageChange }) {
     const handleImageChange = (event) => {
-        setImage(event.target.files[0]);
+        const file = event.target.files[0];
+        onImageChange(file);
     };
 
     return (
         <div>
-            <label htmlFor="post-image">Upload an Image:</label>
-            <input type="file" id="post-image" name="post-image" accept="image/*" onChange={handleImageChange} required />
+            <label>
+                Upload Image:
+                <input type="file" accept="image/*" onChange={handleImageChange} />
+            </label>
         </div>
     );
 }

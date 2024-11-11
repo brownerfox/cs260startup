@@ -1,7 +1,9 @@
 import React from 'react';
 import Post from './post';
+import './feed.css';
 
-export function Feed({ posts = [] }) {
+
+export function Feed({ posts = [], userName }) {
     return (
       <div className="feed">
         {posts.length > 0 ? (
@@ -14,6 +16,7 @@ export function Feed({ posts = [] }) {
               imageUrl={post.imageUrl}
               caption={post.caption}
               time={post.time}
+              userName={userName}
             />
           ))
         ) : (

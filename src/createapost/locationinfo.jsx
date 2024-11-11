@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export function LocationInfo() {
-    const [enableLocation, setEnableLocation] = useState(false);
-
-    const handleCheckboxChange = () => {
-        setEnableLocation(!enableLocation);
+function LocationInfo({ onLocationChange }) {
+    const handleLocationChange = (event) => {
+        onLocationChange(event.target.value);
     };
 
     return (
         <div>
-            <p><strong>Location:</strong> Deer Creek Reservoir <i>(provided by Geolocation API)</i></p>
-            <label htmlFor="enable-location">
-                <input type="checkbox" id="enable-location" name="enable-location" checked={enableLocation} onChange={handleCheckboxChange} />
-                Enable Location on Post
+            <label>
+                Location:
+                <input type="text" onChange={handleLocationChange} placeholder="Enter location" />
             </label>
         </div>
     );

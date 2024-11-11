@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Feed from '../feed/feed.jsx';
 import './profile.css';
 
-export function Profile() {
+export function Profile({ userName }) {
   const posts = [
     {
       location: "Creek Reservoir",
@@ -19,7 +19,7 @@ export function Profile() {
     <div>
       <main>
         <div className="profile">
-          <h2>BrownFox</h2>
+          <h2>{userName}</h2>
           <img src="user1.jpg" alt="Your Profile Picture" style={{ width: '100px' }} className="profile-image" />
           <p>Fisher of fish and fisher of men. Matthew 4:18-20</p>
           <hr />

@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export function FishingRodSelection() {
-    const [rodType, setRodType] = useState('');
-    const [rodBrand, setRodBrand] = useState('');
+function FishingRodSelection({ onRodTypeChange, onRodBrandChange }) {
+    const handleRodTypeChange = (event) => {
+        onRodTypeChange(event.target.value);
+    };
+
+    const handleRodBrandChange = (event) => {
+        onRodBrandChange(event.target.value);
+    };
 
     return (
         <div>
-            <label htmlFor="fishing-rod-reel">Type of Fishing Rod Reel:</label>
-            <select id="fishing-rod-reel" name="fishing-rod-reel" value={rodType} onChange={(e) => setRodType(e.target.value)} required>
-                <option value="">Select Reel Type</option>
-                <option value="spinning">Spinning Reel</option>
-                <option value="baitcasting">Baitcasting Reel</option>
-                <option value="fly">Fly Reel</option>
-            </select>
-
-            <label htmlFor="fishing-rod-brand">Fishing Rod Brand:</label>
-            <input type="text" id="fishing-rod-brand" name="fishing-rod-brand" value={rodBrand} onChange={(e) => setRodBrand(e.target.value)} placeholder="Enter brand name" required />
+            <label>
+                Rod Type:
+                <input type="text" onChange={handleRodTypeChange} placeholder="Enter rod type" />
+            </label>
+            <br />
+            <label>
+                Rod Brand:
+                <input type="text" onChange={handleRodBrandChange} placeholder="Enter rod brand" />
+            </label>
         </div>
     );
 }

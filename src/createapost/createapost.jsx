@@ -1,26 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ImageUpload from './imageupload';
 import LocationInfo from './locationinfo';
 import FishingRodSelection from './fishingrodselection';
 import BaitSelection from './baitselection';
-import { collectPostData } from './posthelpers.jsx';
+import './createapost.css';
 
-export function CreatePost() {
+export function CreatePost({ onAddPost }) {
+    const [imageUrl, setImage] = useState(null);
+    const [location, setLocation] = useState('');
+    const [rodType, setRodType] = useState('');
+    const [rodBrand, setRodBrand] = useState('');
+    const [baitType, setBaitType] = useState('');
+    const [baitColor, setBaitColor] = useState('');
+    const [caption, setCaption] = useState('');
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const postData = collectPostData();
-        console.log(postData);  // Here you’d handle the submission, e.g., send it to an API
+        const newPost = {
+            imageUrl,
+            location,
+            rodType,
+            rodBrand,
+            baitType,
+            baitColor,
+            caption,
+            time: new Date().toLocaleString()
+        };
+        onAddPost(newPost);
+
+        setImage(null);
+        setLocation('');
+        setRodType('');
+        setRodBrand('');
+        setBaitType('');
+        setBaitColor('');
+        setCaption('');
     };
 
     return (
         <div className="create-post">
             <h1>Create a New Post</h1>
-            <hr />
             <form onSubmit={handleSubmit} encType="multipart/form-data">
-                <ImageUpload />
-                <LocationInfo />
-                <FishingRodSelection />
-                <BaitSelection />
+                <ImageUpload onImageChange={setImage} />
+                <LocationInfo onLocationChange={setLocation} />
+                <FishingRodSelection onRodTypeChange={setRodType} onRodBrandChange={setRodBrand} />
+                <BaitSelection onBaitTypeChange={setBaitType} onBaitColorChange={setBaitColor} />
+                <label>
+                    Caption:
+                    <textarea value={caption} onChange={(e) => setCaption(e.target.value)} required />
+                </label>
                 <button type="submit">Create Post</button>
             </form>
         </div>

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
 import { Feed } from './feed/feed';
@@ -7,11 +8,20 @@ import { About } from './about/about';
 import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
+import CreatePost from './createapost/createapost';
 
 function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
     const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
     const [authState, setAuthState] = React.useState(currentAuthState);
+    const [posts, setPosts] = useState([]);
+
+    const handleAddPost = (newPost) => {
+        setPosts((prevPosts) => {
+            console.log('Adding new post:', newPost);
+            return [...prevPosts, newPost];
+        });
+    };
 
     return (
         <BrowserRouter>
@@ -66,11 +76,14 @@ function App() {
                     }
                     exact
                     />
-                    <Route path='/feed' element={<Feed userName={userName} />} />
-                    <Route path='/profile' element={<Profile />} />
+                    <Route path='/feed' element={<Feed posts={posts} userName={userName} />} />
+                    <Route path='/profile' element={<Profile userName={userName} />} />
                     <Route path='/about' element={<About />} />
+                    <Route path='/createapost' element={<CreatePost onAddPost={handleAddPost} />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
+
+                
                 <footer className='bg-dark'>
                     <div className='container-fluid'>
                         <span className='text-reset'>Taft Lakey</span>

@@ -1,0 +1,45 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .post {
+    width: 100%;
+    max-width: 600px; /* Limit width of each post for better readability */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .post-info, .post-image, .post-caption, .post-time {
+    margin-bottom: 10px;
+  }
+  
+  .post-image img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .post-actions button {
+    background-color: transparent;
+    color: #00A86B;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .post-actions button:hover {
+    color: #fff;
+  }
+  

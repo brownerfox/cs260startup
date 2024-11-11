@@ -1,7 +1,7 @@
 import React from 'react';
 import '../profile/profile.css';
 
-export function Post({ location, rodType, baitType, imageUrl, caption, time }) {
+export function Post({ location, rodType, baitType, imageUrl, caption, time, userName }) {
   return (
     <div className="post">
       <div className="post-info">
@@ -18,11 +18,13 @@ export function Post({ location, rodType, baitType, imageUrl, caption, time }) {
         <button>✈️</button>
       </div>
       <div className="post-caption">
-        <p><strong>User:</strong> {caption}</p>
+        <p><strong>User:</strong> {userName}</p>
+        <p><strong>Caption:</strong> {caption}</p>
       </div>
       <div className="post-time">
         <p>{time}</p>
       </div>
+      <hr/>
     </div>
   );
 }
