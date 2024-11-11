@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Feed from './Feed';
+import Feed from '../feed/feed.jsx';
 import './profile.css';
 
 export function Profile() {
-  // Sample data; in a real app, this could come from props or API calls
   const posts = [
     {
       location: "Creek Reservoir",
@@ -14,7 +13,6 @@ export function Profile() {
       caption: "Decent fish I caught in Deer Creek!",
       time: "2 hours ago",
     },
-    // Additional posts can be added here
   ];
 
   return (

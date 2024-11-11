@@ -1,54 +1,70 @@
-body {
-    background-color: #00A86B;
+.body {
+    background-color: #00A86B !important;
     color: white;
     margin: 0;
     font-family: Arial, sans-serif;
-  }
-  
-  footer {
-    background-color: #00A86B;
-    color: white;
-    padding: 1em;
-  }
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-  .navbar {
-    background-color: #00A86B !important;
-  }
-  
-  .nav-link {
-    color: white !important;
-  }
-  
-  .navbar-brand {
+header {
+    flex: 0 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.navbar-brand {
     color: white !important;
     padding-left: 0.3em;
     border-bottom: solid white thin;
-  }
-  
-  
-  menu .nav-item {
-    padding: 0 0.3em;
-  }
-  
-  footer a {
-    float: right;
-  }
-  
-  @media (max-height: 600px) {
-    header {
-      display: none;
-    }
-    footer {
-      display: none;
-    }
-  }
+}
 
-  footer a {
+menu {
+    flex: 1;
+    display: flex;
+    flex-direction: row !important;
+    list-style: none;
+}
+
+menu .nav-item {
+    padding: 0 0.3em;
+}
+
+.nav-link {
+    color: white !important;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+footer {
+    flex: 0 30px;
+    padding: 1em;
+    margin-top: auto;
+    text-align: justify;
+}
+
+footer a {
+    float: right;
     color: white;
     text-decoration: none;
-    float: right;
     padding-right: 1em;
-  }
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
+}
+
+@media (max-height: 600px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+}

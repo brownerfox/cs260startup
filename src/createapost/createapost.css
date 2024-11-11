@@ -28,7 +28,7 @@ form select {
 }
 
 button {
-    background-color: #00A86B;
+    background-color: #ffffff;
     color: white;
     border: none; 
     border-radius: 5px; 
@@ -54,5 +54,5 @@ form label[for="enable-location"] {
 
 
 button:hover {
-    background-color: #008C54;
+    background-color: #ffffff;
 }

@@ -15,7 +15,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <div className='body' style={{ backgroundColor: '#00A86B', color: 'white' }}>
+            <div className='body bg-dark text-light'>
                 <header className='container-fluid'>
                     <nav className='navbar fixed-top navbar-dark'>
                         <div className='navbar-brand'>
@@ -71,7 +71,7 @@ function App() {
                     <Route path='/about' element={<About />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
-                <footer className='bg-dark text-dark text-muted'>
+                <footer className='bg-dark'>
                     <div className='container-fluid'>
                         <span className='text-reset'>Taft Lakey</span>
                         <a className='text-reset' href='https://github.com/brownerfox/cs260startup'>

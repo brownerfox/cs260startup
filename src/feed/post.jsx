@@ -1,5 +1,5 @@
 import React from 'react';
-import './profile.css';
+import '../profile/profile.css';
 
 export function Post({ location, rodType, baitType, imageUrl, caption, time }) {
   return (

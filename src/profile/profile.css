@@ -1,148 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333
-}
-
-h1, h2 {
-    color: #00A86B;
-}
-
-header {
     background-color: #00A86B;
     color: white;
-    padding: 16px;
-    text-align: center;
-}
-
-header nav menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
     margin: 0;
-    flex-direction: row;
-}
-
-header nav menu li {
-    margin: 0 15px;
-}
-
-header nav menu li a {
-    color:white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav menu li a:hover {
-    text-decoration: underline;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile {
     text-align: center;
+    margin: 20px auto;
 }
 
-main h2 {
-    margin: 20px 0;
+.profile-image {
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-img.profile-image {
-    width: 60px; 
-    height: 60px; 
-    object-fit: cover; 
-    border-radius: 50%; 
-}
-
-img.post-image {
-    width: 400px;
-    height: 300px; 
-    object-fit: cover;
-}
-
-
-nav {
-    background-color: #00A86B;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-nav menu {
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-nav menu li {
-    margin: 0 15px;
+nav ul li {
+    margin-right: 10px;
 }
 
-nav menu li a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-}
-
-nav menu li a:hover {
-    text-decoration: underline;
-}
-
-
-.feed {
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-.feed .post {
-    margin-bottom: 20px;
-}
-
-.post-info {
-    margin-bottom: 10px;
-}
-
-.post-image img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.post-actions {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
+    padding: 0.5em;
 }
 
 footer {
-    background: #00A86B;
+    background-color: #00A86B;
     color: white;
+    padding: 1em;
     text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    header nav menu {
-        flex-direction: column;
-    }
-
-    main input, button {
-        width: 90%;
-    }
 }
