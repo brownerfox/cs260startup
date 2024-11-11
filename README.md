@@ -107,3 +107,21 @@ I have git pushed my final CSS startup additions but I think that I'm going to g
 ### 6, 7 & 8
 
 So here is the fun part of my last 2 weeks. I uploaded my html assignment. It went into the gradebook as a 0 which was quite alarming at first. I was pleased to see that it was because I had forgotten to update my README.md file, AKA, what I'm doing right now for my HTML Startup assignment. I then went to reupload my assignment and it was put in once again as a 0. This time the message was far less appealing. I was told that my website was no longer running. I went to check and it was true. I restarted my instance and reached out to a TA, all to no avail. My website had stopped funcitoning. I found that I had not yet verified my email so they shut down my down. I reverified my email and then recreated the instance inorder to get my production environment running. It still would not let me use my domain that had worked only a week before. I then bought a new domain, talked to another TA and was incapable of getting my production environment up and running again. I reached out to Professor Venture over email and discord with no response. So after all of this experience, I decided to do my CSS Startup regardless of my current incapabilities of successfully running my production environment. Thanks for listening to my TEDtalk.
+
+## React Startup
+
+### 1
+
+I started working right away on uploading my Simon. It was a little difficult setting up npm and I also didn't know initially that I had to use powershell to make it work. I got it working eventually. Afterwards I started looking through the jsx files and such to get a good idea of how react works. I used the simon startup for a ton of starter code for my project.
+
+### 2
+
+This was honestly such a struggle for me. The hardest part was restructuring my files so that they made sense in the react format. I had to figure out about what type of files react uses. It was hard because I didn't want to do the bare minimum but it was still very hard for me.
+
+### 3, 4, 5, 6
+
+I struggled to remember to upload to github because I was really struggling to get a good grasp on how to use react. This led me to be kind of confused as I would switch back and forth between the simon files and the startup files. I just tried to make little changes and then remember to commit.
+
+### 7, 8, 9
+
+I had to once again remember that I had to use powershell to actually upload my files to my server. I was able to connect to my website and it looked good so I decided it was time to submit it.
