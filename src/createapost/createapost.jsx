@@ -27,7 +27,7 @@ export function CreatePost({ onAddPost }) {
     
             if (response.ok) {
                 const savedPost = await response.json();
-                onAddPost(savedPost); // Optional: Add the saved post to the UI if needed
+                onAddPost(savedPost);
             }
         } catch (error) {
             console.error("Error creating post:", error);

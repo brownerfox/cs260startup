@@ -4,6 +4,7 @@ import './feed.css';
 
 
 export function Feed({ posts = [], userName }) {
+    console.log(posts);
     return (
       <div className="feed">
         {posts.length > 0 ? (
