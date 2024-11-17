@@ -14,19 +14,24 @@ export function CreatePost({ onAddPost }) {
     const [baitColor, setBaitColor] = useState('');
     const [caption, setCaption] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const newPost = {
-            imageUrl,
-            location,
-            rodType,
-            rodBrand,
-            baitType,
-            baitColor,
-            caption,
-            time: new Date().toLocaleString()
-        };
-        onAddPost(newPost);
+        const newPost = { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time: new Date().toLocaleString() };
+        
+        try {
+            const response = await fetch('/api/posts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newPost),
+            });
+    
+            if (response.ok) {
+                const savedPost = await response.json();
+                onAddPost(savedPost); // Optional: Add the saved post to the UI if needed
+            }
+        } catch (error) {
+            console.error("Error creating post:", error);
+        }
 
         setImage(null);
         setLocation('');
