@@ -125,3 +125,13 @@ I struggled to remember to upload to github because I was really struggling to g
 ### 7, 8, 9
 
 I had to once again remember that I had to use powershell to actually upload my files to my server. I was able to connect to my website and it looked good so I decided it was time to submit it.
+
+## Service Startup
+
+### 1
+
+So I initially started working on getting simon up and running. This was a pretty easy step, this one gave me little to no issues, especially because I've started to learn a lot more about Node.js. The simon service had a lot of really good tools to show me how a service was supposed to be built. I learned a lot by looking at how the index.js was built in the service module. The examples of the api endpoints were really useful, especially considering how similar the majority of mine are to the simon endpoints.
+
+### 2
+
+This step took a lot of learning and time. One of the biggest issues that I was facing seemed to be that the port initially given to me wasnt working while I was testing it. I'm not certain if this was an issue that I was facing specifically or if this was more widespread but it wasn't working super well. Over time, I started to get my endpoints to work. The one issue that I haven't been able to entirely solve as of yet is my create a post endpoint. I'm not certain if it needs to be able to save the post yet, so I decided that I did enough and I'll talk to a TA for help setting it up!
