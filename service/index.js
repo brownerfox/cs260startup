@@ -20,3 +20,23 @@ apiRouter.post('/auth/create', async (req, res) => {
       res.send({ token: user.token });
     }
   });
+
+  apiRouter.post('/auth/login', async (req, res) => {
+    const user = users[req.body.email];
+    if (user) {
+      if (req.body.password === user.password) {
+        user.token = uuid.v4();
+        res.send({ token: user.token });
+        return;
+      }
+    }
+    res.status(401).send({ msg: 'Unauthorized' });
+  });
+
+  apiRouter.delete('/auth/logout', (req, res) => {
+    const user = Object.values(users).find((u) => u.token === req.body.token);
+    if (user) {
+      delete user.token;
+    }
+    res.status(204).end();
+  });
