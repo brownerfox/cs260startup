@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="smiley.jpg" />
+  <link rel="stylesheet" href="createapost.css">
+  <title>Post Creation</title>
+</head>
+
+<body>
+    <header>
+
+    <nav>
+        <menu>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feed.html">Feed</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>  
+        </menu>
+    </nav>
+
+    <hr />
+    </header>
+  <h1>Create a New Post</h1>
+  <hr />
+
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <div>
+      <label for="post-image">Upload an Image:</label>
+      <input type="file" id="post-image" name="post-image" accept="image/*" required>
+    </div>
+
+    <div>
+      <p><strong>Location:</strong> Deer Creek Reservoir <i>provided by Geolocation API</i></p>
+    </div>
+
+    <div>
+      <label for="enable-location">
+        <input type="checkbox" id="enable-location" name="enable-location">
+        Enable Location on Post
+      </label>
+    </div>
+
+    <div>
+      <label for="fishing-rod-reel">Type of Fishing Rod Reel:</label>
+      <select id="fishing-rod-reel" name="fishing-rod-reel" required>
+        <option value="">Select Reel Type</option>
+        <option value="spinning">Spinning Reel</option>
+        <option value="baitcasting">Baitcasting Reel</option>
+        <option value="fly">Fly Reel</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="fishing-rod-brand">Fishing Rod Brand:</label>
+      <input type="text" id="fishing-rod-brand" name="fishing-rod-brand" placeholder="Enter brand name" required>
+    </div>
+
+    <div>
+      <label for="bait-type">Type of Bait:</label>
+      <select id="bait-type" name="bait-type" required>
+        <option value="">Select Bait Type</option>
+        <option value="live-bait">Live Bait</option>
+        <option value="artificial-bait">Artificial Bait</option>
+        <option value="fly-bait">Fly Bait</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="bait-color">Color of Bait:</label>
+      <select id="bait-color" name="bait-color" required>
+        <option value="">Select Bait Color</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit">Create Post</button>
+    </div>
+  </form>
+
+  <footer>
+    <hr />
+    <span class="text-reset">Taft Lakey</span>
+    <br />
+    <a href="https://github.com/brownerfox/cs260startup">GitHub</a>
+  </footer>
+
+</body>
+</html>
