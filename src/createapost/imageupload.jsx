@@ -3,7 +3,8 @@ import React from 'react';
 function ImageUpload({ onImageChange }) {
     const handleImageChange = (event) => {
         const file = event.target.files[0];
-        onImageChange(file);
+        let imageURL = URL.createObjectURL(file);
+        onImageChange(imageURL);
     };
 
     return (
