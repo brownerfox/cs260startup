@@ -67,11 +67,9 @@ apiRouter.post('/posts', (req, res) => {
   res.status(201).json(newPost);
 });
 
-app.use((req, res) => {
+app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
 });
-
-app.use(`/api`, apiRouter);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
