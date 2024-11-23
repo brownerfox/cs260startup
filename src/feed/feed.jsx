@@ -4,6 +4,16 @@ import './feed.css';
 
 
 export function Feed({ posts = [], userName }) {
+  const [posts, setPosts] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('/api/posts')
+      .then((response) => response.json())
+      .then((posts) => {
+        setPosts(posts);
+      });
+  }, []);
+
     console.log(posts);
     return (
       <div className="feed">
