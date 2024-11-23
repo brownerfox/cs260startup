@@ -4,6 +4,7 @@ const app = express();
 const bcrypt = require('bcrypt');
 const DB = require('./database.js');
 
+const authCookieName = 'token';
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
@@ -76,6 +77,14 @@ apiRouter.post('/post', (req, res) => {
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
 });
+
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+}
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
