@@ -46,15 +46,30 @@ apiRouter.post('/auth/login', async (req, res) => {
   res.status(401).send({ msg: 'Unauthorized' });
 });
 
-apiRouter.delete('/auth/logout', (req, res) => {
-  const user = Object.values(users).find((u) => u.token === req.body.token);
-  if (user) {
-    delete user.token;
-  }
+apiRouter.delete('/auth/logout', (_req, res) => {
+  res.clearCookie(authCookieName);
   res.status(204).end();
 });
 
-apiRouter.post('/post', (req, res) => {
+const secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+  const authToken = req.cookies[authCookieName];
+  const user = await DB.getUserByToken(authToken);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+});
+
+secureApiRouter.get('/posts', async (req, res) => {
+  const posts = await DB.getPosts();
+  res.send(posts);
+});
+
+secureApiRouter.post('/post', (req, res) => {
   const { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time } = req.body;
 
   const newPost = {
