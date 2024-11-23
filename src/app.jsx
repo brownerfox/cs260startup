@@ -76,7 +76,7 @@ function App() {
                     }
                     exact
                     />
-                    <Route path='/feed' element={<Feed posts={posts} userName={userName} />} />
+                    <Route path='/feed' element={<Feed userName={userName} />} />
                     <Route path='/profile' element={<Profile userName={userName} />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/createapost' element={<CreatePost onAddPost={handleAddPost} />} />
