@@ -69,7 +69,7 @@ secureApiRouter.get('/posts', async (req, res) => {
   res.send(posts);
 });
 
-secureApiRouter.post('/post', (req, res) => {
+secureApiRouter.post('/post', async (req, res) => {
   const { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time } = req.body;
 
   const newPost = {
@@ -81,12 +81,19 @@ secureApiRouter.post('/post', (req, res) => {
       baitType,
       baitColor,
       caption,
-      time
+      time: time || new Date()
   };
 
-  posts.push(newPost);
+  try {
+    await DB.addPost(newPost);
+    res.status(201).send(newPost);
+} catch (error) {
+    console.error(error);
+    res.status(500).send({ error: "Error adding post to the database." });
+}
+  
 
-  res.status(201).json(newPost);
+  res.status(201).send(newPost);
 });
 
 app.use((_req, res) => {
