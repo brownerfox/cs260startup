@@ -7,7 +7,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('fishpics');
 const userCollection = db.collection('user');
-const scoreCollection = db.collection('posts');
+const postCollection = db.collection('posts');
 
 (async function testConnection() {
     await client.connect();
@@ -38,3 +38,25 @@ async function createUser(email, password) {
   
     return user;
 }
+
+async function addPost(post) {
+    return postCollection.insertOne(post);
+}
+
+function getPosts() {
+    const query = { score: { $gt: 0, $lt: 900 } };
+    const options = {
+      sort: { score: -1 },
+      limit: 10,
+    };
+    const cursor = postCollection.find(query, options);
+    return cursor.toArray();
+}
+
+module.exports = {
+    getUser,
+    getUserByToken,
+    createUser,
+    addPost,
+    getPosts,
+  };
