@@ -26,7 +26,6 @@ function getUserByToken(token) {
 }
 
 async function createUser(email, password) {
-    // Hash the password before we insert it into the database
     const passwordHash = await bcrypt.hash(password, 10);
   
     const user = {
@@ -44,10 +43,10 @@ async function addPost(post) {
 }
 
 function getPosts() {
-    const query = { score: { $gt: 0, $lt: 900 } };
+    const query = {};
     const options = {
-      sort: { score: -1 },
-      limit: 10,
+        sort: { time: -1 },
+        limit: 10,
     };
     const cursor = postCollection.find(query, options);
     return cursor.toArray();
