@@ -3,7 +3,7 @@ import Post from './post';
 import './feed.css';
 
 
-export function Feed({ posts = [], userName }) {
+export function Feed({ userName }) {
   const [posts, setPosts] = React.useState([]);
 
   React.useEffect(() => {
