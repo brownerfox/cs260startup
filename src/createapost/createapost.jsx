@@ -19,7 +19,7 @@ export function CreatePost({ onAddPost }) {
         const newPost = { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time: new Date().toLocaleString() };
         
         try {
-            const response = await fetch('/api/posts', {
+            const response = await fetch('/api/post', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newPost),

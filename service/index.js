@@ -1,6 +1,8 @@
+const cookieParser = require('cookie-parser');
 const express = require('express');
-const uuid = require('uuid');
 const app = express();
+const bcrypt = require('bcrypt');
+const DB = require('./database.js');
 
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -9,6 +11,8 @@ const posts = [];
 const users = {};
 
 app.use(express.static('public'));
+
+app.use(cookieParser());
 
 app.use(express.json());
 
@@ -47,7 +51,7 @@ apiRouter.delete('/auth/logout', (req, res) => {
   res.status(204).end();
 });
 
-apiRouter.post('/posts', (req, res) => {
+apiRouter.post('/post', (req, res) => {
   const { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time } = req.body;
 
   const newPost = {
