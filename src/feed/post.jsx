@@ -18,7 +18,7 @@ export function Post({ location, rodType, baitType, imageUrl, caption, time, use
         <button>✈️</button>
       </div>
       <div className="post-caption">
-        <p><strong>User:</strong> {userName}</p>
+        <p><strong>User:</strong> {userName.split('@')[0]}</p>
         <p><strong>Caption:</strong> {caption}</p>
       </div>
       <div className="post-time">
