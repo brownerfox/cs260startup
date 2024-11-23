@@ -84,15 +84,7 @@ secureApiRouter.post('/post', async (req, res) => {
       time: time || new Date()
   };
 
-  try {
-    await DB.addPost(newPost);
-    res.status(201).send(newPost);
-} catch (error) {
-    console.error(error);
-    res.status(500).send({ error: "Error adding post to the database." });
-}
-  
-
+  await DB.addPost(newPost);
   res.status(201).send(newPost);
 });
 
