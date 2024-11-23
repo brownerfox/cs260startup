@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 const config = require('./dbConfig.json');
 
