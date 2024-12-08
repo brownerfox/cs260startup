@@ -1,7 +1,6 @@
 const PostEvent = {
     System: 'system',
-    End: 'gameEnd',
-    Start: 'gameStart',
+    NewPost: 'newPost',
   };
 
   class EventMessage {
@@ -49,7 +48,9 @@ const PostEvent = {
 
     receiveEvent(event) {
         this.events.push(event);
-        this.handlers.forEach((handler) => handler(event));
+        if (event.type === PostEvent.NewPost) {
+            this.handlers.forEach((handler) => handler(event));
+          }
       }
       
   }
