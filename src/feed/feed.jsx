@@ -9,12 +9,30 @@ export function Feed({ userName }) {
   React.useEffect(() => {
     fetch('/api/posts')
       .then((response) => response.json())
-      .then((posts) => {
-        setPosts(posts);
+      .then((initialPosts) => {
+        setPosts(initialPosts);
       });
-  }, []);
 
-  console.log(posts);
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    const port = window.location.port;
+    const socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
+
+    socket.onmessage = (event) => {
+      try {
+        const newPost = JSON.parse(event.data);
+        if (newPost.type === 'NEW_POST') {
+          setPosts((prevPosts) => [...prevPosts, newPost.value]);
+        }
+      } catch (error) {
+        console.error('Error parsing WebSocket message:', error);
+      }
+    };
+
+    return () => {
+      socket.close();
+    };
+}, []);
+
   return (
     <div className="feed">
       {posts.length > 0 ? (
