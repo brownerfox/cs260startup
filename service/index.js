@@ -5,14 +5,12 @@ const bcrypt = require('bcryptjs');
 const DB = require('./database.js');
 const uuid = require('uuid');
 const { peerProxy } = require('./peerProxy.js');
+const { wss } = require('./peerProxy');
 
 const authCookieName = 'token';
 
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
-
-const posts = [];
-const users = {};
 
 app.use(express.static('public'));
 
@@ -73,7 +71,7 @@ secureApiRouter.get('/posts', async (req, res) => {
 });
 
 secureApiRouter.post('/post', async (req, res) => {
-  const { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time } = req.body;
+  const { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time, userName } = req.body;
 
   const newPost = {
       id: uuid.v4(),
@@ -84,7 +82,8 @@ secureApiRouter.post('/post', async (req, res) => {
       baitType,
       baitColor,
       caption,
-      time: time || new Date()
+      time: time || new Date(),
+      userName
   };
 
   await DB.addPost(newPost);

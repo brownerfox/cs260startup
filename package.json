@@ -33,7 +33,7 @@
     "react-lifecycles-compat": "^3.0.4",
     "react-router": "^6.11.1",
     "react-router-dom": "^6.11.1",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.5",
     "regenerator-runtime": "^0.13.11",
     "rollup": "^3.21.6",
@@ -43,7 +43,8 @@
     "uncontrollable": "^7.2.1",
     "uuid": "^11.0.3",
     "vite": "^4.3.5",
-    "warning": "^4.0.3"
+    "warning": "^4.0.3",
+    "ws": "^8.18.0"
   },
   "scripts": {
     "dev": "vite",

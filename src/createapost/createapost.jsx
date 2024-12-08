@@ -5,7 +5,7 @@ import FishingRodSelection from './fishingrodselection';
 import BaitSelection from './baitselection';
 import './createapost.css';
 
-export function CreatePost({ onAddPost }) {
+export function CreatePost({ userName }) {
     const [imageUrl, setImage] = useState(null);
     const [location, setLocation] = useState('');
     const [rodType, setRodType] = useState('');
@@ -16,7 +16,7 @@ export function CreatePost({ onAddPost }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const newPost = { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time: new Date().toLocaleString() };
+        const newPost = { imageUrl, location, rodType, rodBrand, baitType, baitColor, caption, time: new Date().toLocaleString(), userName };
         
         try {
             const response = await fetch('/api/post', {
@@ -27,7 +27,6 @@ export function CreatePost({ onAddPost }) {
     
             if (response.ok) {
                 const savedPost = await response.json();
-                onAddPost(savedPost);
             }
         } catch (error) {
             console.error("Error creating post:", error);

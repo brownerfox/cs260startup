@@ -14,15 +14,6 @@ function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
     const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
     const [authState, setAuthState] = React.useState(currentAuthState);
-    
-    const [posts, setPosts] = useState([]);
-
-    const handleAddPost = (newPost) => {
-        setPosts((prevPosts) => {
-            console.log('Adding new post:', newPost);
-            return [...prevPosts, newPost];
-        });
-    };
 
     return (
         <BrowserRouter>
@@ -34,7 +25,7 @@ function App() {
                         </div>
                         <menu className='navbar-nav'>
                             <li className='nav-item'>
-                                <NavLink className='nav-link' to=''>
+                                <NavLink className='nav-link' to='/'>
                                     Login
                                 </NavLink>
                             </li>
@@ -75,12 +66,11 @@ function App() {
                         }}
                     />
                     }
-                    exact
                     />
-                    <Route path='/feed' element={<Feed userName={userName} />} />
+                    <Route path='/feed' element={<Feed />} />
                     <Route path='/profile' element={<Profile userName={userName} />} />
                     <Route path='/about' element={<About />} />
-                    <Route path='/createapost' element={<CreatePost onAddPost={handleAddPost} />} />
+                    <Route path='/createapost' element={<CreatePost userName={userName} />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
 

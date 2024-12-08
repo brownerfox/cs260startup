@@ -21,7 +21,7 @@ export function Profile({ userName }) {
         </nav>
 
         {/* Display user posts in the Feed component */}
-        <Feed userName={userName}/>
+        <Feed />
       </main>
     </div>
   );

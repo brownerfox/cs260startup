@@ -3,7 +3,7 @@ import Post from './post';
 import './feed.css';
 
 
-export function Feed({ userName }) {
+export function Feed() {
   const [posts, setPosts] = React.useState([]);
 
   React.useEffect(() => {
@@ -37,12 +37,14 @@ export function Feed({ userName }) {
           <Post
             key={index}
             location={post.location}
+            rodBrand={post.rodBrand}
             rodType={post.rodType}
+            baitColor={post.baitColor}
             baitType={post.baitType}
             imageUrl={post.imageUrl}
             caption={post.caption}
             time={post.time}
-            userName={userName}
+            userName={post.userName}
           />
         ))
       ) : (
