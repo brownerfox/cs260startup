@@ -88,6 +88,16 @@ secureApiRouter.post('/post', async (req, res) => {
   };
 
   await DB.addPost(newPost);
+
+  if (wss) {
+    const message = JSON.stringify({
+      type: 'newPost',
+      payload: newPost,
+    });
+
+    wss.broadcast(message);
+  }
+
   res.status(201).send(newPost);
 });
 

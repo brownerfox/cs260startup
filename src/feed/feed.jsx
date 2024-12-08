@@ -9,29 +9,26 @@ export function Feed({ userName }) {
   React.useEffect(() => {
     fetch('/api/posts')
       .then((response) => response.json())
-      .then((initialPosts) => {
-        setPosts(initialPosts);
+      .then((posts) => {
+        setPosts(posts);
       });
+  }, []);
 
+  // WebSocket connection for real-time updates
+  React.useEffect(() => {
+    let port = window.location.port;
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
-    const port = window.location.port;
-    const socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
+    const ws = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
 
-    socket.onmessage = (event) => {
-      try {
-        const newPost = JSON.parse(event.data);
-        if (newPost.type === 'NEW_POST') {
-          setPosts((prevPosts) => [...prevPosts, newPost.value]);
-        }
-      } catch (error) {
-        console.error('Error parsing WebSocket message:', error);
+    ws.onmessage = (event) => {
+      const message = JSON.parse(event.data);
+      if (message.type === 'newPost') {
+        setPosts((prevPosts) => [message.payload, ...prevPosts]); // Add new post to the top
       }
     };
 
-    return () => {
-      socket.close();
-    };
-}, []);
+    return () => ws.close(); // Clean up WebSocket connection
+  }, []);
 
   return (
     <div className="feed">

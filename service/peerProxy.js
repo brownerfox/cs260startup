@@ -43,6 +43,12 @@ function peerProxy(httpServer) {
     });
   });
 
+  wss.broadcast = (data) => {
+    connections.forEach((c) => {
+      c.ws.send(data);
+    });
+  };
+
   // Keep active connections alive
   setInterval(() => {
     connections.forEach((c) => {
