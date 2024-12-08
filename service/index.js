@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bcrypt = require('bcryptjs');
 const DB = require('./database.js');
-
+const uuid = require('uuid');
 const authCookieName = 'token';
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;

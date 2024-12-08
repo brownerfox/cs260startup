@@ -4,22 +4,11 @@ import Feed from '../feed/feed.jsx';
 import './profile.css';
 
 export function Profile({ userName }) {
-  const posts = [
-    {
-      location: "Creek Reservoir",
-      rodType: "Pflueger Spinning Rod",
-      baitType: "Purple Spinner",
-      imageUrl: "IMG_1463.JPEG",
-      caption: "Decent fish I caught in Deer Creek!",
-      time: "2 hours ago",
-    },
-  ];
-
   return (
     <div>
       <main>
         <div className="profile">
-          <h2>{userName}</h2>
+          <h2>{userName.split('@')[0]}</h2>
           <img src="user1.jpg" alt="Your Profile Picture" style={{ width: '100px' }} className="profile-image" />
           <p>Fisher of fish and fisher of men. Matthew 4:18-20</p>
           <hr />
@@ -32,7 +21,7 @@ export function Profile({ userName }) {
         </nav>
 
         {/* Display user posts in the Feed component */}
-        <Feed posts={posts} />
+        <Feed userName={userName}/>
       </main>
     </div>
   );
