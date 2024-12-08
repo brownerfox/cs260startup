@@ -135,3 +135,17 @@ So I initially started working on getting simon up and running. This was a prett
 ### 2
 
 This step took a lot of learning and time. One of the biggest issues that I was facing seemed to be that the port initially given to me wasnt working while I was testing it. I'm not certain if this was an issue that I was facing specifically or if this was more widespread but it wasn't working super well. Over time, I started to get my endpoints to work. The one issue that I haven't been able to entirely solve as of yet is my create a post endpoint. I'm not certain if it needs to be able to save the post yet, so I decided that I did enough and I'll talk to a TA for help setting it up! Scratch what I said preiously, I got the post to work now. The only thing missing is my photos being used, even though they are showing up when I run the website locally.
+
+## Startup Websocket
+
+### 1
+
+Simon wasn't quite as big of a help this time around, mainly because the websockets seemed pretty self explanatory. It was definitely nice to see their formatting but the actual implementation of the websocket was very unique to what I was doing. So I had to find my own solutions to creating my websocket.
+
+### 2, 3, 4, 5
+
+Like I said previously, this was a little more strenous of an experience. It was difficult to wrap my mind around when and how a websocket would be useful and then actually turn it into an implementation. I had a teacher who would always say that good writing is the product of good thinking and I would say that good coding is the product of good thinking and planning. Sadly I'm not great at either of those things so it was a struggle getting everything set up. I decided to implement a websocket on my feed, this way it would always be checking to see if someone had uploaded a new post, then it will take that post and add it to the feed. I might go and add more implementations of my websocket if I were to add more features to my website.
+
+### Everything Else
+
+This one was pretty easy. It seems like my website isn't loading but it's because something with my server when I deploy the files doesn't work right away. I'll make sure to get this fixed ASAP. I just actually don't know how to do it and I feel like I haven't had a great explanation of how the files deploying actually works, so I don't know how to debug it all too well.
