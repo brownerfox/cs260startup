@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
@@ -8,7 +8,7 @@ import { About } from './about/about';
 import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
-import CreatePost from './createapost/createapost';
+import { CreatePost } from './createapost/createapost';
 
 function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
